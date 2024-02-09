@@ -2,16 +2,13 @@
 
 namespace quest19._1
 {
-    class MyClass<T>
+    partial class Program
     {
-        public T field;
-        static void FacrotyMethod() { }
-    }
-    class Program
-    {
-        static void Main()
+        static void Main(string[] args)
         {
-            _ = new MyClass<int>();
+            int t = MyClass<int>.FacrotyMethod();
+            string s = MyClass<string>.FacrotyMethod();
+            Console.WriteLine(s);
         }
     }
 }
